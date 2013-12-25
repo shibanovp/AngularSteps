@@ -1,12 +1,25 @@
 <!doctype html>
-<html ng-app>
-  <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-  </head>
-  <body>
-    <div>
-      <input type="text" ng-model="yourName" placeholder="Enter a name here">
-      <h1>Hello, {{ yourName }}!</h1>
-    </div>
-  </body>
+<html ng-app="myApp">
+<head>
+<link rel="stylesheet"
+	href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"
+	media="all" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+<script src="js/main.js"></script>
+</head>
+<body>
+	<div ng-controller="MyController">
+		<input type="text" ng-model="person.name"
+			placeholder="Enter your name" />
+		<h5>Hello {{ person.name }}</h5>
+		<h6>{{clock}}</h6>
+	</div>
+	<div ng-controller="DemoController">
+		<h4>The simpliest adding machine ever</h4>
+		<h4>Current Counter: {{ counter }}</h4>
+		<button ng-click="add(1)" class="btn btn-success">Add</button>
+		<button ng-click="subtract(1)" class="btn btn-success">Subtract</button>
+	</div>
+</body>
 </html>
