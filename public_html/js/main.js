@@ -6,13 +6,11 @@ app.controller('MyController',function($scope){
     $scope.person = {
         name: "Paul S."
     };
+    var updateClock = function(){
+    	$scope.clock = new Date();
+    }
+    var timer = setInterval(function(){
+    	$scope.$apply(updateClock);
+    },1);
+    updateClock();
 })
-app.controller('ParentController', function($scope) {
-  $scope.person = {greeted: false};
-});
-
-app.controller('ChildController', function($scope) {
-  $scope.sayHello = function() {
-    $scope.person.greeted = true;
-  }
-});
