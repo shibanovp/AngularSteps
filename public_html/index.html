@@ -15,5 +15,11 @@
 		<h5>Hello {{ person.name }}</h5>
 		<h6>{{clock}}</h6>
 	</div>
+	<div ng-controller="DemoController">
+		<h4>The simpliest adding machine ever</h4>
+		<h4>Current Counter: {{ counter }}</h4>
+		<button ng-click="add(1)" class="btn btn-success">Add</button>
+		<button ng-click="subtract(1)" class="btn btn-success">Subtract</button>
+	</div>
 </body>
 </html>
